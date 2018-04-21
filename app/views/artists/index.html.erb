@@ -1,6 +1,5 @@
-<div>
-	<% @artist.each do |artist| %>
-	  <h4><%= artist.name %></h4>
-	  <img src=<%= artist.image_url %>>
-	<% end %>
-</div>
+<% @artists.each do |artist| %>
+  <%= artist.name %>
+  <%= image_tag artist.image_url %>
+  <%= link_to 'Show artist', artist_path(artist) %>
+<% end %>
